@@ -6,13 +6,13 @@
 </h1>
 
 
-[![Stars](https://img.shields.io/github/stars/EvamariaTG/EvaMaria?style=flat-square&color=yellow)](https://github.com/EvamariaTG/EvaMaria/stargazers)
-[![Forks](https://img.shields.io/github/forks/EvamariaTG/EvaMaria?style=flat-square&color=orange)](https://github.com/EvamariaTG/EvaMaria/fork)
-[![Size](https://img.shields.io/github/repo-size/EvamariaTG/EvaMaria?style=flat-square&color=green)](https://github.com/EvamariaTG/EvaMaria/)   
+[![Stars](https://img.shields.io/github/stars/mptelepro/eva-imbd-edit?style=flat-square&color=yellow)](https://github.com/mptelepro/eva-imbd-edit/stargazers)
+[![Forks](https://img.shields.io/github/forks/mptelepro/eva-imbd-edit?style=flat-square&color=orange)](https://github.com/mptelepro/eva-imbd-edit/fork)
+[![Size](https://img.shields.io/github/repo-size/mptelepro/eva-imbd-edit?style=flat-square&color=green)](https://github.com/mptelepro/eva-imbd-edit/)   
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/EvamariaTG/EvaMaria)   
-[![Contributors](https://img.shields.io/github/contributors/EvamariaTG/EvaMaria?style=flat-square&color=green)](https://github.com/EvamariaTG/EvaMaria/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/EvamariaTG/EvaMaria/blob/main/LICENSE)
-[![Sparkline](https://stars.medv.io/EvamariaTG/EvaMaria.svg)](https://stars.medv.io/EvamariaTG/EvaMaria)
+[![Contributors](https://img.shields.io/github/contributors/mptelepro/eva-imbd-edit?style=flat-square&color=green)](https://github.com/mptelepro/eva-imbd-edit/graphs/contributors)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/mptelepro/eva-imbd-edit/blob/main/LICENSE)
+[![Sparkline](https://stars.medv.io/EvamariaTG/EvaMaria.svg)](https://stars.medv.io/mptelepro/eva-imbd-edit)
 
 
 ## Features
