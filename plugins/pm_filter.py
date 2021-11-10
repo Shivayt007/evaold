@@ -709,16 +709,21 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply(
-            buttons = [
+        k = await msg.reply("പതിനായിരം തവണ പറയണോ..🥺നിങ്ങൾ അയച്ച സിനിമയുടെ പേര് തെറ്റാണ്.⚠️അക്ഷരം അറിയില്ലെങ്കിൽ ഗൂഗിളിൽ പോയി സെർച്ച്‌ ചെയ്ത് എടുത്തോണ്ട് വാ.☺️സ്പെല്ലിങ് മിസ്റ്റേക്ക് ഉണ്ടെങ്കിൽ നിങ്ങൾക്കിവിടെ മൂവി കിട്ടാൻ ബുദ്ധിമുട്ട് ആയിരിക്കും.😢\n ⛔️ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ..⛔️.")
+            return
+    if AUTH_CHANNEL and not await is_subscribed(client, message):
+        try:
+            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        btn = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-            ],
-            [
-                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton(
+                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                )
             ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        ]
                   
         await asyncio.sleep(8)
         await k.delete()
