@@ -708,7 +708,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await bot.send_video(
+        k = await msg.reply(
                 chat_id=update.chat.id,
                 video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
                 caption=f"<b><u>⭕️Hai Nanba Couldn't Find This Movie In My DataBase🥺</b></u>\n\n<b><u>⭕️Search Google🔎 For Correct Spelling And Sent It Here🙏Else Not Get Movie Report To Admins\n\n</u></b>"
