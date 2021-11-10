@@ -712,8 +712,7 @@ async def advantage_spell_chok(msg):
         k = await message.reply(
                 text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
                 reply_markup=reply_markup,
-            )            
-            return
+            )                        
         buttons = [[
             InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
             InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
