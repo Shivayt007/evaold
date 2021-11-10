@@ -708,7 +708,24 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("പതിനായിരം തവണ പറയണോ..🥺നിങ്ങൾ അയച്ച സിനിമയുടെ പേര് തെറ്റാണ്.⚠️അക്ഷരം അറിയില്ലെങ്കിൽ ഗൂഗിളിൽ പോയി സെർച്ച്‌ ചെയ്ത് എടുത്തോണ്ട് വാ.☺️സ്പെല്ലിങ് മിസ്റ്റേക്ക് ഉണ്ടെങ്കിൽ നിങ്ങൾക്കിവിടെ മൂവി കിട്ടാൻ ബുദ്ധിമുട്ട് ആയിരിക്കും.😢\n ⛔️ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ..⛔️.")
+        k = await message.reply_text(
+        'This will delete all indexed files.\nDo you want to continue??',
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="YES", callback_data="autofilter_delete"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        text="CANCEL", callback_data="close_data"
+                    )
+                ],
+            ]
+        ),
+        quote=True,
+    )
         await asyncio.sleep(8)
         await k.delete()
         return
