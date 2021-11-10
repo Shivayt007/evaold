@@ -708,7 +708,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("നിങ്ങൾ ചോദിക്കുന്ന മൂവി ഇതിലുണ്ടോന്ന് ഉറപ്പ് വരുത്തുക.")
+        k = await msg.reply("പതിനായിരം തവണ പറയണോ..🥺നിങ്ങൾ അയച്ച സിനിമയുടെ പേര് തെറ്റാണ്.⚠️അക്ഷരം അറിയില്ലെങ്കിൽ ഗൂഗിളിൽ പോയി സെർച്ച്‌ ചെയ്ത് എടുത്തോണ്ട് വാ.☺️സ്പെല്ലിങ് മിസ്റ്റേക്ക് ഉണ്ടെങ്കിൽ നിങ്ങൾക്കിവിടെ മൂവി കിട്ടാൻ ബുദ്ധിമുട്ട് ആയിരിക്കും.😢\n ⛔️ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ..⛔️.")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -721,28 +721,5 @@ async def advantage_spell_chok(msg):
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     await msg.reply("നിങ്ങൾ തിരയുന്ന മൂവി ഇതിലുണ്ടോന്ന് പരിശോധിക്കുക.\ഇല്ലെങ്കിൽ @admin ഉടൻ പരിഹാരം കാണുന്നതാണ്. അതുവരെ ക്ഷമിക്കുക.", reply_markup=InlineKeyboardMarkup(btn))
-
     
 
-    else:
-        Send_message=await bot.send_video(
-                chat_id=update.chat.id,
-                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
-                caption=f"<b>Hai 💞Mwone💞Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉</b>"
-                        f"<b><a href='https://t.me/Myfreak123'>👇Admin</a></b>. \n\n"
-                        f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക</b>(25 Sec)",
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("🔍Search Google", url=f"https://t.me/mcallmovies/206")
-                            ],
-                            [
-                                InlineKeyboardButton("♻️Contact Admin♻️", url=f"https://t.me/MCrequestAccepter_bot")
-                            ]
-                        ]
-                    ),
-                reply_to_message_id=update.message_id
-            )
-        await asyncio.sleep(20) # in seconds
-        await Send_message.delete()
