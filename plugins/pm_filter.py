@@ -712,6 +712,13 @@ async def advantage_spell_chok(msg):
         await asyncio.sleep(8)
         await k.delete()
         return
+        btn = [
+            [
+                InlineKeyboardButton(
+                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                )
+            ]
+        ]
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
                 InlineKeyboardButton(
