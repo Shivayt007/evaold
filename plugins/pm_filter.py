@@ -708,7 +708,22 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        else:
+        k = await msg.reply("നിങ്ങൾ ചോദിക്കുന്ന മൂവി ഇതിലുണ്ടോന്ന് ഉറപ്പ് വരുത്തുക.")
+        await asyncio.sleep(8)
+        await k.delete()
+        return
+    SPELL_CHECK[msg.message_id] = movielist
+    btn = [[
+                InlineKeyboardButton(
+                    text=movie.strip(),
+                    callback_data=f"spolling#{user}#{k}",
+                )
+            ] for k, movie in enumerate(movielist)]
+    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
+    await msg.reply("നിങ്ങൾ തിരയുന്ന മൂവി ഇതിലുണ്ടോന്ന് പരിശോധിക്കുക.\ഇല്ലെങ്കിൽ @admin ഉടൻ പരിഹാരം കാണുന്നതാണ്. അതുവരെ ക്ഷമിക്കുക.", reply_markup=InlineKeyboardMarkup(btn))
+
+    
+else:
         Send_message=await bot.send_video(
                 chat_id=update.chat.id,
                 video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
@@ -728,17 +743,3 @@ async def advantage_spell_chok(msg):
                     ),
                 reply_to_message_id=update.message_id
             )
-        await asyncio.sleep(8)
-        await k.delete()
-        return
-    SPELL_CHECK[msg.message_id] = movielist
-    btn = [[
-                InlineKeyboardButton(
-                    text=movie.strip(),
-                    callback_data=f"spolling#{user}#{k}",
-                )
-            ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("നിങ്ങൾ തിരയുന്ന മൂവി ഇതിലുണ്ടോന്ന് പരിശോധിക്കുക.\ഇല്ലെങ്കിൽ @admin ഉടൻ പരിഹാരം കാണുന്നതാണ്. അതുവരെ ക്ഷമിക്കുക.", reply_markup=InlineKeyboardMarkup(btn))
-    
-
