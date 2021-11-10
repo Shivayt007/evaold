@@ -8,7 +8,6 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -709,16 +708,9 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
-                reply_markup=reply_markup,
-            )                        
-        btn = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
-        ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
-        
+        k = await msg.reply("പതിനായിരം തവണ പറയണോ..🥺നിങ്ങൾ അയച്ച സിനിമയുടെ പേര് തെറ്റാണ്.⚠️അക്ഷരം അറിയില്ലെങ്കിൽ ഗൂഗിളിൽ പോയി സെർച്ച്‌ ചെയ്ത് എടുത്തോണ്ട് വാ.☺️സ്പെല്ലിങ് മിസ്റ്റേക്ക് ഉണ്ടെങ്കിൽ നിങ്ങൾക്കിവിടെ മൂവി കിട്ടാൻ ബുദ്ധിമുട്ട് ആയിരിക്കും.😢\n ⛔️ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ..⛔️.")
+        await asyncio.sleep(8)
+        await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
