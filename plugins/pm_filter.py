@@ -724,7 +724,7 @@ async def advantage_spell_chok(msg):
 
     
 
-      else:
+    else:
         Send_message=await bot.send_video(
                 chat_id=update.chat.id,
                 video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
