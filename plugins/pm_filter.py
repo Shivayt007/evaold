@@ -8,6 +8,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -719,11 +720,11 @@ async def advantage_spell_chok(msg):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🔍 Updates', url='https://t.me/EvaMariaUpdates'),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/EvaMariaUpdates')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('Updates', url='https://t.me/EvaMariaUpdates'),
+            InlineKeyboardButton('😊 Updates', url='https://t.me/EvaMariaUpdates')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)   
     
