@@ -61,6 +61,15 @@ async def save_group(bot, message):
                 except:
                     pass
             temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                                     reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton("try Again",url=file_link)
+                            ]
+                        ]
+                    )
+                )                      
 
                 
 
