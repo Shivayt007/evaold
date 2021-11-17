@@ -52,7 +52,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await script.message.reply(
+            temp.MELCOW['welcome'] = await script.video.reply(
                                          video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
                                          caption="<b>📍Hello:- സുഖമാണ?</b>",
        
