@@ -52,9 +52,12 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply_video(
-                                         video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                                         
+            temp.MELCOW['welcome'] = await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
                                                                                   
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -65,8 +68,7 @@ async def save_group(bot, message):
                         ]
                     )
                 )
-                    await message.reply(script.START_TXT reply_markup=reply_markup)
-        await asyncio.sleep(2)
+                    
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
