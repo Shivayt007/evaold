@@ -58,7 +58,7 @@ async def save_group(bot, message):
                         [
                             [
                                 InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                                InlineKeyboardButton("try Again",url=file_link)
+                                InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld")
                             ]
                         ]
                     )
