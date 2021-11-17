@@ -52,7 +52,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f" Give Me A Valid Chat ID')
+            temp.MELCOW['welcome'] = await message.reply('Give Me A Valid Chat ID')
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
