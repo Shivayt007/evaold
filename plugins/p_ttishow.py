@@ -57,9 +57,7 @@ async def save_group(bot, message):
             InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
-            reply_markup=reply_markup)
+        
 
 
 
