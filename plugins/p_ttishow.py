@@ -52,9 +52,9 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply_video,text(
+            temp.MELCOW['welcome'] = await message.reply_video(
                                          video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                                         text="ok",
+                                         
                                                                                   
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -65,6 +65,8 @@ async def save_group(bot, message):
                         ]
                     )
                 )
+                    await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await asyncio.sleep(2)
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
