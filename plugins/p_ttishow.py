@@ -43,6 +43,15 @@ async def save_group(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
             text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton("try Again",url=file_link)
+                            ]
+                        ]
+                    )
+                )                      
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
