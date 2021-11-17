@@ -55,7 +55,7 @@ async def save_group(bot, message):
             temp.MELCOW['welcome'] = await message.send_video(
                                          video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
                                          text= "Hello:- സുഖമാണ?",
-                                         chat_id=update.chat.id
+                                         chat_id=chat_, 
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
