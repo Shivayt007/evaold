@@ -54,7 +54,7 @@ async def save_group(bot, message):
                     pass
             temp.MELCOW['welcome'] = await message.reply(
                                          video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                                         caption=f"<b>📍Hello:- സുഖമാണ?</b>"
+                                         caption="<b>📍Hello:- സുഖമാണ?</b>",
        
                     reply_markup=InlineKeyboardMarkup(
                         [
