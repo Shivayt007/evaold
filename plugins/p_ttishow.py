@@ -51,13 +51,8 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>"),
-         buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help")
-            InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
-        ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
-        
+            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+          
 
 
 
