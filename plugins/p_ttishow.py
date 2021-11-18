@@ -61,7 +61,7 @@ async def save_group(bot, message):
         )
             
         welcome = await message.reply_photo()      # ur welcome message
-        await asyncio.sleep(60)      # sleep 1 minute
+        await asyncio.sleep(2)      # sleep 1 minute
         await welcome.delete()                    
 
 
