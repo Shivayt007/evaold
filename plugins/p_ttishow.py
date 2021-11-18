@@ -59,7 +59,10 @@ async def save_group(bot, message):
             
             parse_mode='html'
         )
-                     
+                     await asyncio.sleep(8)
+        await k.delete()                    
+
+
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
