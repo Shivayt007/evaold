@@ -61,7 +61,7 @@ async def save_group(bot, message):
         )
             
                      await asyncio.sleep(8)
-                     await welcome.delete()                    
+                     await temp.MELCOW['welcome'].delete()                    
 
 
 
