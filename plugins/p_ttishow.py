@@ -56,7 +56,8 @@ async def save_group(bot, message):
             temp.MELCOW['welcome'] = await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TEXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-                     parse_mode='html'
+            parse_mode='html'
+        )
         
             
                      
