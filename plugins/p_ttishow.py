@@ -64,9 +64,7 @@ async def save_group(bot, message):
                      parse_mode='html'
         
             
-                     await asyncio.sleep(8)
-                     await message.reply_photo.delete()                    
-
+                     
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
