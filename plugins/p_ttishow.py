@@ -57,10 +57,9 @@ async def save_group(bot, message):
             photo=random.choice(PICS),
             caption=script.START_TEXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             
-            parse_mode='html'
-        )
+            
                      await asyncio.sleep(8)
-        await k.delete()                    
+                     await k.delete()                    
 
 
 
