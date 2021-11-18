@@ -61,7 +61,7 @@ async def save_group(bot, message):
         )
             
                      await asyncio.sleep(8)
-                     await k.delete()                    
+                     await message.delete()                    
 
 
 
